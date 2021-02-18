@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="locationsPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="LocationsView1" RangeSize="25" DataControl="AppModuleDataControl1" id="LocationsView1Iterator"/>
+    <searchRegion Binds="LocationsView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LocationsView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="LocationsView1Iterator" id="LocationsView1">
+      <nodeDefinition DefName="model.vo.LocationsView" Name="LocationsView10">
+        <AttrNames>
+          <Item Value="LocationId"/>
+          <Item Value="StreetAddress"/>
+          <Item Value="PostalCode"/>
+          <Item Value="City"/>
+          <Item Value="StateProvince"/>
+          <Item Value="CountryId"/>
+          <Item Value="LocationX"/>
+          <Item Value="LocationY"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="LocationsView1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="LocationsView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
+  </bindings>
+</pageDefinition>

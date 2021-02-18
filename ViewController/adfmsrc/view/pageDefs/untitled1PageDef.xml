@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="untitled1PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="DepartmentsView1" RangeSize="25" DataControl="AppModuleDataControl" id="DepartmentsView1Iterator"/>
+    <searchRegion Binds="DepartmentsView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="DepartmentsView1Query"/>
+    <iterator Binds="EmployeesView1" RangeSize="25" DataControl="AppModuleDataControl" id="EmployeesView1Iterator"/>
+    <iterator Binds="LocationsView1" RangeSize="25" DataControl="AppModuleDataControl1" id="LocationsView1Iterator"/>
+    <searchRegion Binds="LocationsView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LocationsView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="DepartmentsView1Iterator" id="DepartmentsView1">
+      <nodeDefinition DefName="model.vo.DepartmentsView" Name="DepartmentsView10">
+        <AttrNames>
+          <Item Value="DepartmentId"/>
+          <Item Value="DepartmentName"/>
+          <Item Value="ManagerId"/>
+          <Item Value="LocationId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="DepartmentsView1Iterator" id="DepartmentsView11">
+      <nodeDefinition DefName="model.vo.DepartmentsView" Name="DepartmentsView110">
+        <AttrNames>
+          <Item Value="DepartmentId"/>
+          <Item Value="DepartmentName"/>
+          <Item Value="ManagerId"/>
+          <Item Value="LocationId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="DepartmentsView1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="DepartmentsView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="DepartmentsView1Iterator" id="DepartmentId">
+      <AttrNames>
+        <Item Value="DepartmentId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DepartmentsView1Iterator" id="DepartmentName">
+      <AttrNames>
+        <Item Value="DepartmentName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DepartmentsView1Iterator" id="ManagerId">
+      <AttrNames>
+        <Item Value="ManagerId"/>
+      </AttrNames>
+    </attributeValues>
+    <listOfValues IterBinding="DepartmentsView1Iterator" StaticList="false" Uses="LOV_LocationId" id="LocationId"/>
+    <attributeValues IterBinding="DepartmentsView1Iterator" id="TLocationName">
+      <AttrNames>
+        <Item Value="TLocationName"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="DepartmentsView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="DepartmentsView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="DepartmentsView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="DepartmentsView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <tree IterBinding="EmployeesView1Iterator" id="EmployeesView1">
+      <nodeDefinition DefName="model.vo.EmployeesView" Name="EmployeesView10">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="Salary"/>
+          <Item Value="CommissionPct"/>
+          <Item Value="ManagerId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="EmpImage"/>
+          <Item Value="EmpDoc"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="LocationsView1Iterator" id="LocationsView1">
+      <nodeDefinition DefName="model.vo.LocationsView" Name="LocationsView10">
+        <AttrNames>
+          <Item Value="LocationId"/>
+          <Item Value="StreetAddress"/>
+          <Item Value="PostalCode"/>
+          <Item Value="City"/>
+          <Item Value="StateProvince"/>
+          <Item Value="CountryId"/>
+          <Item Value="LocationX"/>
+          <Item Value="LocationY"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="LocationsView1Iterator" id="StreetAddress">
+      <AttrNames>
+        <Item Value="StreetAddress"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LocationsView1Iterator" id="PostalCode">
+      <AttrNames>
+        <Item Value="PostalCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LocationsView1Iterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LocationsView1Iterator" id="StateProvince">
+      <AttrNames>
+        <Item Value="StateProvince"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LocationsView1Iterator" id="CountryId">
+      <AttrNames>
+        <Item Value="CountryId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LocationsView1Iterator" id="LocationX">
+      <AttrNames>
+        <Item Value="LocationX"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LocationsView1Iterator" id="LocationY">
+      <AttrNames>
+        <Item Value="LocationY"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LocationsView1Iterator" id="LocationId1">
+      <AttrNames>
+        <Item Value="LocationId"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="LocationsView1Iterator" id="First1" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="LocationsView1Iterator" id="Previous1" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="LocationsView1Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="LocationsView1Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="LocationsView1Iterator" id="Create1" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="LocationsView1Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit1" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
+    <action id="Rollback1" RequiresUpdateModel="false" Action="rollbackTransaction"
+            DataControl="AppModuleDataControl1"/>
+    <listOfValues IterBinding="DepartmentsView1Iterator" StaticList="false" Uses="LOV_ManagerId" id="ManagerId1"/>
+    <action IterBinding="EmployeesView1Iterator" id="Create2" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="EmployeesView1Iterator" id="Delete2" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>
