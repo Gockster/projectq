@@ -30,59 +30,12 @@
                             <f:validator binding="#{bindings.LocationId1.validator}"/>
                             <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationId1.format}"/>
                         </af:inputText>
-                        <af:inputText value="#{bindings.StreetAddress.inputValue}"
-                                      label="#{bindings.StreetAddress.hints.label}"
-                                      required="#{bindings.StreetAddress.hints.mandatory}"
-                                      columns="#{bindings.StreetAddress.hints.displayWidth}"
-                                      maximumLength="#{bindings.StreetAddress.hints.precision}"
-                                      shortDesc="#{bindings.StreetAddress.hints.tooltip}" id="it17">
-                            <f:validator binding="#{bindings.StreetAddress.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.PostalCode.inputValue}"
-                                      label="#{bindings.PostalCode.hints.label}"
-                                      required="#{bindings.PostalCode.hints.mandatory}"
-                                      columns="#{bindings.PostalCode.hints.displayWidth}"
-                                      maximumLength="#{bindings.PostalCode.hints.precision}"
-                                      shortDesc="#{bindings.PostalCode.hints.tooltip}" id="it18">
-                            <f:validator binding="#{bindings.PostalCode.validator}"/>
-                        </af:inputText>
                         <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
                                       required="#{bindings.City.hints.mandatory}"
                                       columns="#{bindings.City.hints.displayWidth}"
                                       maximumLength="#{bindings.City.hints.precision}"
                                       shortDesc="#{bindings.City.hints.tooltip}" id="it19">
                             <f:validator binding="#{bindings.City.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.StateProvince.inputValue}"
-                                      label="#{bindings.StateProvince.hints.label}"
-                                      required="#{bindings.StateProvince.hints.mandatory}"
-                                      columns="#{bindings.StateProvince.hints.displayWidth}"
-                                      maximumLength="#{bindings.StateProvince.hints.precision}"
-                                      shortDesc="#{bindings.StateProvince.hints.tooltip}" id="it20">
-                            <f:validator binding="#{bindings.StateProvince.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.CountryId.inputValue}" label="#{bindings.CountryId.hints.label}"
-                                      required="#{bindings.CountryId.hints.mandatory}"
-                                      columns="#{bindings.CountryId.hints.displayWidth}"
-                                      maximumLength="#{bindings.CountryId.hints.precision}"
-                                      shortDesc="#{bindings.CountryId.hints.tooltip}" id="it21">
-                            <f:validator binding="#{bindings.CountryId.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.LocationX.inputValue}" label="#{bindings.LocationX.hints.label}"
-                                      required="#{bindings.LocationX.hints.mandatory}"
-                                      columns="#{bindings.LocationX.hints.displayWidth}"
-                                      maximumLength="#{bindings.LocationX.hints.precision}"
-                                      shortDesc="#{bindings.LocationX.hints.tooltip}" id="it22">
-                            <f:validator binding="#{bindings.LocationX.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationX.format}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.LocationY.inputValue}" label="#{bindings.LocationY.hints.label}"
-                                      required="#{bindings.LocationY.hints.mandatory}"
-                                      columns="#{bindings.LocationY.hints.displayWidth}"
-                                      maximumLength="#{bindings.LocationY.hints.precision}"
-                                      shortDesc="#{bindings.LocationY.hints.tooltip}" id="it23">
-                            <f:validator binding="#{bindings.LocationY.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationY.format}"/>
                         </af:inputText>
                         <f:facet name="footer">
                             <af:panelGroupLayout layout="horizontal" id="pgl6">
@@ -123,30 +76,6 @@
                                                   pattern="#{bindings.LocationsView1.hints.LocationId.format}"/>
                             </af:inputText>
                         </af:column>
-                        <af:column sortProperty="#{bindings.LocationsView1.hints.StreetAddress.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.LocationsView1.hints.StreetAddress.label}"
-                                   id="c19">
-                            <af:inputText value="#{row.bindings.StreetAddress.inputValue}"
-                                          label="#{bindings.LocationsView1.hints.StreetAddress.label}"
-                                          required="#{bindings.LocationsView1.hints.StreetAddress.mandatory}"
-                                          columns="#{bindings.LocationsView1.hints.StreetAddress.displayWidth}"
-                                          maximumLength="#{bindings.LocationsView1.hints.StreetAddress.precision}"
-                                          shortDesc="#{bindings.LocationsView1.hints.StreetAddress.tooltip}" id="it6">
-                                <f:validator binding="#{row.bindings.StreetAddress.validator}"/>
-                            </af:inputText>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.LocationsView1.hints.PostalCode.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.LocationsView1.hints.PostalCode.label}"
-                                   id="c20">
-                            <af:inputText value="#{row.bindings.PostalCode.inputValue}"
-                                          label="#{bindings.LocationsView1.hints.PostalCode.label}"
-                                          required="#{bindings.LocationsView1.hints.PostalCode.mandatory}"
-                                          columns="#{bindings.LocationsView1.hints.PostalCode.displayWidth}"
-                                          maximumLength="#{bindings.LocationsView1.hints.PostalCode.precision}"
-                                          shortDesc="#{bindings.LocationsView1.hints.PostalCode.tooltip}" id="it7">
-                                <f:validator binding="#{row.bindings.PostalCode.validator}"/>
-                            </af:inputText>
-                        </af:column>
                         <af:column sortProperty="#{bindings.LocationsView1.hints.City.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.LocationsView1.hints.City.label}" id="c21">
                             <af:inputText value="#{row.bindings.City.inputValue}"
@@ -156,58 +85,6 @@
                                           maximumLength="#{bindings.LocationsView1.hints.City.precision}"
                                           shortDesc="#{bindings.LocationsView1.hints.City.tooltip}" id="it11">
                                 <f:validator binding="#{row.bindings.City.validator}"/>
-                            </af:inputText>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.LocationsView1.hints.StateProvince.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.LocationsView1.hints.StateProvince.label}"
-                                   id="c22">
-                            <af:inputText value="#{row.bindings.StateProvince.inputValue}"
-                                          label="#{bindings.LocationsView1.hints.StateProvince.label}"
-                                          required="#{bindings.LocationsView1.hints.StateProvince.mandatory}"
-                                          columns="#{bindings.LocationsView1.hints.StateProvince.displayWidth}"
-                                          maximumLength="#{bindings.LocationsView1.hints.StateProvince.precision}"
-                                          shortDesc="#{bindings.LocationsView1.hints.StateProvince.tooltip}" id="it12">
-                                <f:validator binding="#{row.bindings.StateProvince.validator}"/>
-                            </af:inputText>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.LocationsView1.hints.CountryId.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.LocationsView1.hints.CountryId.label}"
-                                   id="c23">
-                            <af:inputText value="#{row.bindings.CountryId.inputValue}"
-                                          label="#{bindings.LocationsView1.hints.CountryId.label}"
-                                          required="#{bindings.LocationsView1.hints.CountryId.mandatory}"
-                                          columns="#{bindings.LocationsView1.hints.CountryId.displayWidth}"
-                                          maximumLength="#{bindings.LocationsView1.hints.CountryId.precision}"
-                                          shortDesc="#{bindings.LocationsView1.hints.CountryId.tooltip}" id="it13">
-                                <f:validator binding="#{row.bindings.CountryId.validator}"/>
-                            </af:inputText>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.LocationsView1.hints.LocationX.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.LocationsView1.hints.LocationX.label}"
-                                   id="c24">
-                            <af:inputText value="#{row.bindings.LocationX.inputValue}"
-                                          label="#{bindings.LocationsView1.hints.LocationX.label}"
-                                          required="#{bindings.LocationsView1.hints.LocationX.mandatory}"
-                                          columns="#{bindings.LocationsView1.hints.LocationX.displayWidth}"
-                                          maximumLength="#{bindings.LocationsView1.hints.LocationX.precision}"
-                                          shortDesc="#{bindings.LocationsView1.hints.LocationX.tooltip}" id="it14">
-                                <f:validator binding="#{row.bindings.LocationX.validator}"/>
-                                <af:convertNumber groupingUsed="false"
-                                                  pattern="#{bindings.LocationsView1.hints.LocationX.format}"/>
-                            </af:inputText>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.LocationsView1.hints.LocationY.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.LocationsView1.hints.LocationY.label}"
-                                   id="c25">
-                            <af:inputText value="#{row.bindings.LocationY.inputValue}"
-                                          label="#{bindings.LocationsView1.hints.LocationY.label}"
-                                          required="#{bindings.LocationsView1.hints.LocationY.mandatory}"
-                                          columns="#{bindings.LocationsView1.hints.LocationY.displayWidth}"
-                                          maximumLength="#{bindings.LocationsView1.hints.LocationY.precision}"
-                                          shortDesc="#{bindings.LocationsView1.hints.LocationY.tooltip}" id="it15">
-                                <f:validator binding="#{row.bindings.LocationY.validator}"/>
-                                <af:convertNumber groupingUsed="false"
-                                                  pattern="#{bindings.LocationsView1.hints.LocationY.format}"/>
                             </af:inputText>
                         </af:column>
                     </af:table>
@@ -245,17 +122,6 @@
                                       shortDesc="#{bindings.DepartmentName.hints.tooltip}" id="it25">
                             <f:validator binding="#{bindings.DepartmentName.validator}"/>
                         </af:inputText>
-                        <af:inputComboboxListOfValues id="managerId1Id"
-                                                      popupTitle="Search and Select: #{bindings.ManagerId1.hints.label}"
-                                                      value="#{bindings.ManagerId1.inputValue}"
-                                                      label="#{bindings.ManagerId1.hints.label}"
-                                                      model="#{bindings.ManagerId1.listOfValuesModel}"
-                                                      required="#{bindings.ManagerId1.hints.mandatory}"
-                                                      columns="#{bindings.ManagerId1.hints.displayWidth}"
-                                                      shortDesc="#{bindings.ManagerId1.hints.tooltip}">
-                            <f:validator binding="#{bindings.ManagerId1.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId1.format}"/>
-                        </af:inputComboboxListOfValues>
                         <af:inputListOfValues id="locationIdId"
                                               popupTitle="Search and Select: #{bindings.LocationId.hints.label}"
                                               value="#{bindings.LocationId.inputValue}"
@@ -322,20 +188,6 @@
                                 <f:validator binding="#{row.bindings.DepartmentName.validator}"/>
                             </af:inputText>
                         </af:column>
-                        <af:column sortProperty="#{bindings.DepartmentsView11.hints.ManagerId.name}" filterable="true"
-                                   sortable="true" headerText="#{bindings.DepartmentsView11.hints.ManagerId.label}"
-                                   id="c3">
-                            <af:inputText value="#{row.bindings.ManagerId.inputValue}"
-                                          label="#{bindings.DepartmentsView11.hints.ManagerId.label}"
-                                          required="#{bindings.DepartmentsView11.hints.ManagerId.mandatory}"
-                                          columns="#{bindings.DepartmentsView11.hints.ManagerId.displayWidth}"
-                                          maximumLength="#{bindings.DepartmentsView11.hints.ManagerId.precision}"
-                                          shortDesc="#{bindings.DepartmentsView11.hints.ManagerId.tooltip}" id="it3">
-                                <f:validator binding="#{row.bindings.ManagerId.validator}"/>
-                                <af:convertNumber groupingUsed="false"
-                                                  pattern="#{bindings.DepartmentsView11.hints.ManagerId.format}"/>
-                            </af:inputText>
-                        </af:column>
                         <af:column sortProperty="#{bindings.DepartmentsView11.hints.LocationId.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.DepartmentsView11.hints.LocationId.label}"
                                    id="c4">
@@ -375,15 +227,6 @@
                                                   shortDesc="#{bindings.DepartmentName.hints.tooltip}" id="it9">
                                         <f:validator binding="#{bindings.DepartmentName.validator}"/>
                                     </af:inputText>
-                                    <af:inputText value="#{bindings.ManagerId.inputValue}"
-                                                  label="#{bindings.ManagerId.hints.label}"
-                                                  required="#{bindings.ManagerId.hints.mandatory}"
-                                                  columns="#{bindings.ManagerId.hints.displayWidth}"
-                                                  maximumLength="#{bindings.ManagerId.hints.precision}"
-                                                  shortDesc="#{bindings.ManagerId.hints.tooltip}" id="it10">
-                                        <f:validator binding="#{bindings.ManagerId.validator}"/>
-                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
-                                    </af:inputText>
                                     <af:inputListOfValues id="ilov1"
                                                           popupTitle="Search and Select: #{bindings.LocationId.hints.label}"
                                                           value="#{bindings.LocationId.inputValue}"
@@ -397,6 +240,16 @@
                                     </af:inputListOfValues>
                                     <af:outputText value="#{bindings.TLocationName.inputValue}"
                                                    shortDesc="#{bindings.TLocationName.hints.tooltip}" id="ot2"/>
+                                    <af:inputText value="#{bindings.SalariesTotal.inputValue}"
+                                                  label="#{bindings.SalariesTotal.hints.label}"
+                                                  required="#{bindings.SalariesTotal.hints.mandatory}"
+                                                  columns="#{bindings.SalariesTotal.hints.displayWidth}"
+                                                  maximumLength="#{bindings.SalariesTotal.hints.precision}"
+                                                  shortDesc="#{bindings.SalariesTotal.hints.tooltip}" id="it3">
+                                        <f:validator binding="#{bindings.SalariesTotal.validator}"/>
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.SalariesTotal.format}"/>
+                                    </af:inputText>
                                 </af:panelFormLayout>
                                 <f:facet name="footer">
                                     <af:panelGroupLayout layout="horizontal" id="pgl4">
@@ -418,18 +271,20 @@
                         </af:panelHeader>
                         <af:spacer width="10" height="10" id="s3"/>
                         <af:panelHeader text="Employees" id="ph2">
-                            <af:panelGroupLayout id="pgl5"/>
-                            <af:button actionListener="#{bindings.Create2.execute}" text="Insert"
-                                       disabled="#{!bindings.Create2.enabled}" id="b21"/>
-                            <af:button actionListener="#{bindings.Delete2.execute}" text="Delete"
-                                       disabled="#{!bindings.Delete2.enabled}" id="b22"/>
-                            <af:button actionListener="#{bindings.Commit.execute}" text="Submit"
-                                       disabled="#{!bindings.Commit.enabled}" id="b23"/>
-                            <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
-                                       disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b24">
-                                <af:resetActionListener/>
-                            </af:button>
-                            <af:spacer width="10" height="10" id="s5"/>
+                            <af:panelGroupLayout id="pgl5">
+                                <af:button actionListener="#{bindings.Create2.execute}" text="Insert"
+                                           disabled="#{!bindings.Create2.enabled}" id="b21"/>
+                                <af:button actionListener="#{bindings.Delete2.execute}" text="Delete"
+                                           disabled="#{!bindings.Delete2.enabled}" id="b22"/>
+                                <af:button actionListener="#{bindings.Commit.execute}" text="Submit"
+                                           disabled="#{!bindings.Commit.enabled}" id="b23"/>
+                                <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                                           disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b24">
+                                    <af:resetActionListener/>
+                                </af:button>
+                            </af:panelGroupLayout>
+                            <af:spacer width="10" height="10" id="s11"/>
+                            <af:spacer width="10" height="10" id="s10"/>
                             <af:table rows="#{bindings.EmployeesView1.rangeSize}"
                                       fetchSize="#{bindings.EmployeesView1.rangeSize}"
                                       emptyText="#{bindings.EmployeesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -463,19 +318,22 @@
                                                    shortDesc="#{bindings.EmployeesView1.hints.LastName.tooltip}"
                                                    id="ot9"/>
                                 </af:column>
-                                <af:column headerText="#{bindings.EmployeesView1.hints.Email.label}"
-                                           sortProperty="#{bindings.EmployeesView1.hints.Email.name}" sortable="false"
-                                           id="c8">
-                                    <af:outputText value="#{row.Email}"
-                                                   shortDesc="#{bindings.EmployeesView1.hints.Email.tooltip}"
-                                                   id="ot10"/>
+                                <af:column headerText="#{bindings.EmployeesView1.hints.JobId.label}"
+                                           sortProperty="#{bindings.EmployeesView1.hints.JobId.name}" sortable="false"
+                                           id="c11">
+                                    <af:outputText value="#{row.JobId}"
+                                                   shortDesc="#{bindings.EmployeesView1.hints.JobId.tooltip}"
+                                                   id="ot13"/>
                                 </af:column>
-                                <af:column headerText="#{bindings.EmployeesView1.hints.PhoneNumber.label}"
-                                           sortProperty="#{bindings.EmployeesView1.hints.PhoneNumber.name}"
-                                           sortable="false" id="c9">
-                                    <af:outputText value="#{row.PhoneNumber}"
-                                                   shortDesc="#{bindings.EmployeesView1.hints.PhoneNumber.tooltip}"
-                                                   id="ot11"/>
+                                <af:column headerText="#{bindings.EmployeesView1.hints.ManagerId.label}"
+                                           sortProperty="#{bindings.EmployeesView1.hints.ManagerId.name}"
+                                           sortable="false" id="c14">
+                                    <af:outputText value="#{row.ManagerId}"
+                                                   shortDesc="#{bindings.EmployeesView1.hints.ManagerId.tooltip}"
+                                                   id="ot16">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.EmployeesView1.hints.ManagerId.format}"/>
+                                    </af:outputText>
                                 </af:column>
                                 <af:column headerText="#{bindings.EmployeesView1.hints.HireDate.label}"
                                            sortProperty="#{bindings.EmployeesView1.hints.HireDate.name}"
@@ -485,13 +343,6 @@
                                                    id="ot12">
                                         <af:convertDateTime pattern="#{bindings.EmployeesView1.hints.HireDate.format}"/>
                                     </af:outputText>
-                                </af:column>
-                                <af:column headerText="#{bindings.EmployeesView1.hints.JobId.label}"
-                                           sortProperty="#{bindings.EmployeesView1.hints.JobId.name}" sortable="false"
-                                           id="c11">
-                                    <af:outputText value="#{row.JobId}"
-                                                   shortDesc="#{bindings.EmployeesView1.hints.JobId.tooltip}"
-                                                   id="ot13"/>
                                 </af:column>
                                 <af:column headerText="#{bindings.EmployeesView1.hints.Salary.label}"
                                            sortProperty="#{bindings.EmployeesView1.hints.Salary.name}" sortable="false"
@@ -512,40 +363,6 @@
                                         <af:convertNumber groupingUsed="false"
                                                           pattern="#{bindings.EmployeesView1.hints.CommissionPct.format}"/>
                                     </af:outputText>
-                                </af:column>
-                                <af:column headerText="#{bindings.EmployeesView1.hints.ManagerId.label}"
-                                           sortProperty="#{bindings.EmployeesView1.hints.ManagerId.name}"
-                                           sortable="false" id="c14">
-                                    <af:outputText value="#{row.ManagerId}"
-                                                   shortDesc="#{bindings.EmployeesView1.hints.ManagerId.tooltip}"
-                                                   id="ot16">
-                                        <af:convertNumber groupingUsed="false"
-                                                          pattern="#{bindings.EmployeesView1.hints.ManagerId.format}"/>
-                                    </af:outputText>
-                                </af:column>
-                                <af:column headerText="#{bindings.EmployeesView1.hints.DepartmentId.label}"
-                                           sortProperty="#{bindings.EmployeesView1.hints.DepartmentId.name}"
-                                           sortable="false" id="c15">
-                                    <af:outputText value="#{row.DepartmentId}"
-                                                   shortDesc="#{bindings.EmployeesView1.hints.DepartmentId.tooltip}"
-                                                   id="ot17">
-                                        <af:convertNumber groupingUsed="false"
-                                                          pattern="#{bindings.EmployeesView1.hints.DepartmentId.format}"/>
-                                    </af:outputText>
-                                </af:column>
-                                <af:column headerText="#{bindings.EmployeesView1.hints.EmpImage.label}"
-                                           sortProperty="#{bindings.EmployeesView1.hints.EmpImage.name}"
-                                           sortable="false" id="c16">
-                                    <af:outputText value="#{row.EmpImage}"
-                                                   shortDesc="#{bindings.EmployeesView1.hints.EmpImage.tooltip}"
-                                                   id="ot18"/>
-                                </af:column>
-                                <af:column headerText="#{bindings.EmployeesView1.hints.EmpDoc.label}"
-                                           sortProperty="#{bindings.EmployeesView1.hints.EmpDoc.name}" sortable="false"
-                                           id="c17">
-                                    <af:outputText value="#{row.EmpDoc}"
-                                                   shortDesc="#{bindings.EmployeesView1.hints.EmpDoc.tooltip}"
-                                                   id="ot19"/>
                                 </af:column>
                             </af:table>
                         </af:panelHeader>

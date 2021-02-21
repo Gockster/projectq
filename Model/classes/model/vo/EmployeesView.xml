@@ -13,6 +13,36 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="EmployeesView1"
+    ViewObjectName="model.vo.EmployeesView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_EmployeeId"
+    ListVOName="EmployeesView1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="EmployeeId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="EmployeeId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="EmployeeId"/>
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+      <Item Value="JobId"/>
+      <Item Value="ManagerId"/>
+      <Item Value="HireDate"/>
+      <Item Value="Salary"/>
+      <Item Value="CommissionPct"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
   <EntityUsage
     Name="Employees"
     Entity="model.eo.Employees"/>
@@ -22,7 +52,15 @@
     PrecisionRule="true"
     EntityAttrName="EmployeeId"
     EntityUsage="Employees"
-    AliasName="EMPLOYEE_ID"/>
+    AliasName="EMPLOYEE_ID"
+    LOVName="LOV_EmployeeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="FirstName"
     PrecisionRule="true"
